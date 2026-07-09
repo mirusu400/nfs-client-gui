@@ -44,16 +44,16 @@ jobs:
         include:
           - os: macos-latest
             platform: darwin/arm64
-            artifact: nfsprobe-darwin-arm64
+            artifact: nfs-client-gui-darwin-arm64
           - os: macos-13
             platform: darwin/amd64
-            artifact: nfsprobe-darwin-amd64
+            artifact: nfs-client-gui-darwin-amd64
           - os: ubuntu-latest
             platform: linux/amd64
-            artifact: nfsprobe-linux-amd64
+            artifact: nfs-client-gui-linux-amd64
           - os: windows-latest
             platform: windows/amd64
-            artifact: nfsprobe-windows-amd64
+            artifact: nfs-client-gui-windows-amd64
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -91,20 +91,20 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           cd build/bin
-          tar czf ${{ matrix.artifact }}.tar.gz nfsprobe.app
+          tar czf ${{ matrix.artifact }}.tar.gz nfs-client-gui.app
 
       - name: Package (Linux)
         if: runner.os == 'Linux'
         run: |
           cd build/bin
-          chmod +x nfsprobe
-          tar czf ${{ matrix.artifact }}.tar.gz nfsprobe
+          chmod +x nfs-client-gui
+          tar czf ${{ matrix.artifact }}.tar.gz nfs-client-gui
 
       - name: Package (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          Compress-Archive -Path build\bin\nfsprobe.exe -DestinationPath build\bin\${{ matrix.artifact }}.zip
+          Compress-Archive -Path build\bin\nfs-client-gui.exe -DestinationPath build\bin\${{ matrix.artifact }}.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -146,14 +146,14 @@ jobs:
       - name: Package
         run: |
           cd build/bin
-          chmod +x nfsprobe
-          tar czf nfsprobe-linux-arm64.tar.gz nfsprobe
+          chmod +x nfs-client-gui
+          tar czf nfs-client-gui-linux-arm64.tar.gz nfs-client-gui
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nfsprobe-linux-arm64
-          path: build/bin/nfsprobe-linux-arm64.tar.gz
+          name: nfs-client-gui-linux-arm64
+          path: build/bin/nfs-client-gui-linux-arm64.tar.gz
 
   # Create release when a tag is pushed
   release:

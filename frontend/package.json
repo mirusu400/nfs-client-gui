@@ -1,5 +1,5 @@
 {
-  "name": "nfsprobe-frontend",
+  "name": "nfs-client-gui-frontend",
   "private": true,
   "version": "0.0.1",
   "type": "module",

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // NFSv3 program number and version.

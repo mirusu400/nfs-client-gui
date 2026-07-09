@@ -7,7 +7,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // RPC message types (RFC 5531 §8).

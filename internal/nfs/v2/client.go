@@ -10,9 +10,9 @@ import (
 	gonfs2 "github.com/mirusu400/go-nfs2/nfs2"
 	gorpc "github.com/mirusu400/go-nfs2/rpc"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // Client implements nfs.Client for NFSv2.
@@ -213,7 +213,7 @@ func (c *Client) resolveNFSPort(ctx context.Context) (uint32, error) {
 	return pm.GetPort(ctx, 100003, 2) // NFS prog, version 2
 }
 
-// --- Adapters between nfsprobe and go-nfs2 types ---
+// --- Adapters between nfs-client-gui and go-nfs2 types ---
 
 func toGoNFS2Auth(a *rpc.AuthSysParams) *gorpc.AuthSys {
 	if a == nil {
@@ -258,7 +258,7 @@ func convertFileType(t gonfs2.FileType) nfs.FileType {
 	}
 }
 
-// wrapDialer adapts nfsprobe's transport.Dialer to go-nfs2's rpc.Dialer.
+// wrapDialer adapts nfs-client-gui's transport.Dialer to go-nfs2's rpc.Dialer.
 // Both interfaces have identical signatures (DialContext returning net.Conn).
 func wrapDialer(d transport.Dialer) gorpc.Dialer {
 	return d

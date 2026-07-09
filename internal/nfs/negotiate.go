@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // ClientFactory creates a Client for a specific NFS version.

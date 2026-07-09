@@ -10,12 +10,12 @@ import (
 
 	"golang.org/x/net/proxy"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	v2 "github.com/mirusu400/nfsprobe/internal/nfs/v2"
-	v3 "github.com/mirusu400/nfsprobe/internal/nfs/v3"
-	v4 "github.com/mirusu400/nfsprobe/internal/nfs/v4"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	v2 "github.com/mirusu400/nfs-client-gui/internal/nfs/v2"
+	v3 "github.com/mirusu400/nfs-client-gui/internal/nfs/v3"
+	v4 "github.com/mirusu400/nfs-client-gui/internal/nfs/v4"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 
 	wailsRuntime "github.com/wailsapp/wails/v2/pkg/runtime"
 )

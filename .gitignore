@@ -29,7 +29,7 @@ go.work.sum
 
 # Wails build output
 build/bin/
-nfsprobe
+nfs-client-gui
 
 # Frontend
 frontend/node_modules/

@@ -13,10 +13,10 @@ import (
 	gonfs "github.com/willscott/go-nfs"
 	nfshelper "github.com/willscott/go-nfs/helpers"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	v3 "github.com/mirusu400/nfsprobe/internal/nfs/v3"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	v3 "github.com/mirusu400/nfs-client-gui/internal/nfs/v3"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // startTestNFSServer starts a pure-Go NFSv3 server with an in-memory filesystem.
@@ -31,7 +31,7 @@ func startTestNFSServer(t *testing.T) (net.Listener, int) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	f.Write([]byte("hello from nfsprobe test!"))
+	f.Write([]byte("hello from nfs-client-gui test!"))
 	f.Close()
 
 	if err := mem.MkdirAll("subdir", 0755); err != nil {
@@ -383,8 +383,8 @@ func TestIntegration_V3_EndToEnd(t *testing.T) {
 		}
 		t.Logf("Read %d bytes: %q", len(data), string(data))
 
-		if string(data) != "hello from nfsprobe test!" {
-			t.Errorf("got %q, want %q", string(data), "hello from nfsprobe test!")
+		if string(data) != "hello from nfs-client-gui test!" {
+			t.Errorf("got %q, want %q", string(data), "hello from nfs-client-gui test!")
 		}
 
 		// Lookup subdir

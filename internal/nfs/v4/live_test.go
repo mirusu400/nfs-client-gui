@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	v4 "github.com/mirusu400/nfsprobe/internal/nfs/v4"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	v4 "github.com/mirusu400/nfs-client-gui/internal/nfs/v4"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // TestLive_V4_Ganesha tests NFSv4 against a real nfs-ganesha server.

@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	v3 "github.com/mirusu400/nfsprobe/internal/nfs/v3"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
-	"github.com/mirusu400/nfsprobe/internal/transport"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	v3 "github.com/mirusu400/nfs-client-gui/internal/nfs/v3"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/transport"
 )
 
 // minimalSOCKS5Server is a basic SOCKS5 proxy (no auth, CONNECT only).
@@ -171,7 +171,7 @@ func TestProxy_V3_ThroughSOCKS5(t *testing.T) {
 		t.Fatalf("Read via SOCKS5: %v", err)
 	}
 
-	expected := "hello from nfsprobe test!"
+	expected := "hello from nfs-client-gui test!"
 	if string(data) != expected {
 		t.Errorf("got %q, want %q", string(data), expected)
 	}

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mirusu400/nfsprobe/internal/nfs"
-	"github.com/mirusu400/nfsprobe/internal/rpc"
+	"github.com/mirusu400/nfs-client-gui/internal/nfs"
+	"github.com/mirusu400/nfs-client-gui/internal/rpc"
 )
 
 func TestParseFattr3(t *testing.T) {

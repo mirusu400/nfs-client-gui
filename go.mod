@@ -1,4 +1,4 @@
-module github.com/mirusu400/nfsprobe
+module github.com/mirusu400/nfs-client-gui
 
 go 1.25.0
 
